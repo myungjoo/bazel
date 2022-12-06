@@ -1,0 +1,25 @@
+Source: bazel
+Section: devel
+Priority: optional
+Maintainer: MyungJoo Ham <myungjoo.ham@samsung.com>
+Build-Depends:
+  debhelper (>=9),
+  g++,
+  openjdk-18-jdk,
+  pkg-config,
+  python3,
+  unzip,
+  zip,
+  pkgconfig(bash-completion),
+  pkgconfig(zlib)
+Standards-Version: 3.9.6
+Homepage: https://github.com/myungjoo/bazel
+Architecture: x86_64, aarch64, riscv64
+
+Package: bazel
+Multi-ARch: same
+Depends: openjdk-18-jdk, ${shlibs:Depends}, ${misc:Depends}
+Description: bazel build
+ Tool for the automation of building and testing of software. It supports Java,
+ C++ and Go as programing languages. It also has a support for Android and iOS
+ as mobile operating systems.
